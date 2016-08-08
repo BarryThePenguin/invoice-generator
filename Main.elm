@@ -40,8 +40,8 @@ type Msg
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        _ ->
-            model
+        Clear msg ->
+            { model | invoice = Invoice.update msg model.invoice }
 
 
 

@@ -1,4 +1,4 @@
-module Client exposing (Model, Msg, init, update, view)
+module Person exposing (Model, Msg, init, update, view)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -65,8 +65,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ h2 [] [ text "To:" ]
-        , input [ value model.name, onInput Name ] []
+        [ input [ value model.name, onInput Name ] []
         , input [ value model.address, onInput Address ] []
         , input [ value model.city, onInput City ] []
         , input [ value model.postcode, onInput Postcode ] []

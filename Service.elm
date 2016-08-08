@@ -9,7 +9,8 @@ import Html.Events exposing (..)
 
 
 type alias Model =
-    { title : String
+    { id : Int
+    , title : String
     , description : String
     , amount : Float
     }
@@ -17,7 +18,8 @@ type alias Model =
 
 init : Model
 init =
-    { title = ""
+    { id = 0
+    , title = ""
     , description = ""
     , amount = 0
     }
